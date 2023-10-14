@@ -17,7 +17,9 @@ const ToDo = () => {
         setTodos(newTodos)
 
     }
-    const onDelete=(todoName)=>{
+    const onDelete=(_todoName)=>{
+        let newTodos = todos.filter((todoName)=>todoName !== _todoName)
+        setTodos(newTodos)
 
     }
 
