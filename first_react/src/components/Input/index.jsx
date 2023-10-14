@@ -1,11 +1,8 @@
-import {useState} from 'react'
-const Input = (type='text', placeholder='') => {
-  const [value, setValue] = useState('')
+const Input = (type='text', placeholder='', onChange) => {
   return (
     <>
-    <input type={type} value={value} placeholder={placeholder}
-    onChange={ (e)=>
-    {setValue(e.target.value)}} />
+    <input type={type} placeholder={placeholder}
+    onChange={onChange} />
     </>
   )
 }
