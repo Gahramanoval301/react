@@ -4,6 +4,7 @@ import {useState} from "react"
 const ToDo = () => {
     const [value, setValue] = useState('')
     const [todos, setTodos] = useState([])
+    const [error, setError]= useState('')
 
     const onEdit=(_todoName)=>{
        const newTodos = todos.map((todoName)=>{
@@ -20,17 +21,33 @@ const ToDo = () => {
     const onDelete=(_todoName)=>{
         let newTodos = todos.filter((todoName)=>todoName !== _todoName)
         setTodos(newTodos)
-
+    }
+    const addTodo=()=>{
+        if(value.length<5){
+            setError('NoNONo')
+            setTimeout(() => {
+                setError('')
+            }, 1500);
+            return;
+        }
+        setTodos([...todos, value])
+        setValue('')
     }
 
   return (
     <>
+    <p>{error}</p>
     <div>
-    <Input value={value}  onChange={(e)=>{setValue(e.target.value)}} />
-    <Button title='add todo' onClick={()=>{
-        setTodos([...todos, value])
-        setValue('')
-        }}/>
+    <Input value={value} 
+    onChange={(e)=>{
+        setValue(e.target.value)
+    }} 
+     onKeyDown={(e)=>{
+        if(e.key === 'Enter'){
+          addTodo()
+        }
+    }} />
+    <Button title='add todo' onClick={addTodo}/>
     <Button title='show on console' onClick={()=>{console.log(todos)}}/>
     {
         todos.map((todoName)=>{
