@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import Button from "../Button"
 import Input, { TextArea } from "../Input"
 import styles from './index.module.css'
+import Post from "../Posts"
 
 const url = 'https://652f73380b8d8ddac0b27d03.mockapi.io/api/v2/posts'
 
@@ -37,6 +38,13 @@ function SocialNetworking() {
             }, 1000)
         }
     }
+
+    function onDelete(id) {
+        axios.delete(url +'/' + id).then(()=>{
+            getPosts(setPosts)
+        })
+        
+    }
     return (
         <>
             <div className={styles.inputContainer}>
@@ -54,14 +62,9 @@ function SocialNetworking() {
                 {
                     posts.map((post) => {
                         return (
-                            <div key={post.id} className={styles.postCard}>
-                                <h2>{post.title}</h2>
-                                <p>{post.description}</p>
-                                <hr />
-
-                            </div>
+                            <Post key={post.id} post={post} onDelete={onDelete} />
                         )
-
+                        
                     })
                 }
             </div>
