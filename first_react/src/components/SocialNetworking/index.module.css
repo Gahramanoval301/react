@@ -1,0 +1,16 @@
+.inputContainer{
+    border:2px solid red;
+    padding: 10px 20px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: start;
+    align-items: center;
+    gap:5px;
+}
+.inputContainer > *{
+    font-size: 20px;
+}
+.postCard{
+    text-align: center;
+    padding: 10px 20px;
+}

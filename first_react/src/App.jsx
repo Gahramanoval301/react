@@ -1,6 +1,7 @@
 import FirstElement from './components/FirstElement'
 import ToDo from './components/ToDo'
 import Contacts from './components/Contacts'
+import SocialNetworking from './components/SocialNetworking'
 function App() {
   // const [count, setCount] = useState(0)
 
@@ -8,7 +9,9 @@ function App() {
     <>
     {/* <FirstElement ad='leman' soyad='Qehremanova' />
     <ToDo /> */}
-    <Contacts />
+    {/* <Contacts /> */}
+     <SocialNetworking /> 
+
     </>
   )
 }
