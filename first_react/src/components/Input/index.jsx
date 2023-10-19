@@ -10,7 +10,7 @@ const Input = ({ type = "text", placeholder = '', onChange, value, onEnter }) =>
                 placeholder={placeholder}
                 type={type}
                 value={value}
-                onChange={({ target }) => onChange(target.value)}
+                onChange={(e)=>onChange(e.target.value)}
             />
         </>
     )
@@ -31,7 +31,7 @@ export const TextArea = ({ type = "text", placeholder = '', onChange, value, onE
                 placeholder={placeholder}
                 type={type}
                 value={value}
-                onChange={(e) => onChange(e.target.value)}
+                onChange={({target})=>{onChange(target.value)}}
             />
         </>
     )
