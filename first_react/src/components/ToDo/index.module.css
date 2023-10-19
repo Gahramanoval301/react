@@ -1,0 +1,27 @@
+.todoContainer{
+    border:2px solid palevioletred;
+    padding: 10px 20px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.todoContainer > *{
+    font-size: 20px;
+}
+.todoItem{
+    color:rgb(165, 76, 12);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid black;
+    }
+
+.todoItemsContainer{
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    border-right: 2px solid;
+}

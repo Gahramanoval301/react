@@ -7,10 +7,10 @@ function App() {
 
   return (
     <>
-    {/* <FirstElement ad='leman' soyad='Qehremanova' />
-    <ToDo /> */}
+    {/* <FirstElement ad='leman' soyad='Qehremanova' /> */}
+    <ToDo /> 
     {/* <Contacts /> */}
-     <SocialNetworking /> 
+     {/* <SocialNetworking />  */}
 
     </>
   )
