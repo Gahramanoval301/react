@@ -4,6 +4,7 @@ import Button from "../Button"
 import Input, { TextArea } from "../Input"
 import styles from './index.module.css'
 import Post from "../Posts"
+import { Outlet } from "react-router"
 
 const url = 'https://652f73380b8d8ddac0b27d03.mockapi.io/api/v2/posts'
 
@@ -47,6 +48,7 @@ function SocialNetworking() {
     }
     return (
         <>
+        <Outlet/>
             <div className={styles.inputContainer}>
                 <h1>Post Form</h1>
                 <em style={{
@@ -64,10 +66,10 @@ function SocialNetworking() {
                         return (
                             <Post key={post.id} post={post} onDelete={onDelete} />
                         )
-                        
                     })
                 }
             </div>
+           
         </>
     )
 }
