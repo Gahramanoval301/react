@@ -1,14 +1,20 @@
-import {Routes, Route, Link} from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
+import Home from '../pages/Home'
+import About from '../pages/About'
+import NotFound from '../pages/NotFound'
 import Contacts from '../Contacts'
 import ToDo from '../ToDo'
 import SocialNetworking from '../SocialNetworking'
 import AnyElement from '../AnyElement'
 
-const WebRouting = ()=>{
-    return(
+const WebRouting = () => {
+    return (
         <>
-        <Routes>
-        <Route path='/' element={<div><ToDo />
+            <Routes>
+                <Route path='/' element={<Home />}></Route>
+                <Route path='/about' element={<About />} />
+                <Route path='*' element={<NotFound />} />
+                {/* <Route path='/' element={<div><ToDo />
           <Link to='/contacts'>go to contacts</Link>
         </div>
         } />
@@ -20,8 +26,8 @@ const WebRouting = ()=>{
         </div>} />
         <Route path='/contacts' element={<Contacts />}></Route>
         <Route path='/social' element={SocialNetworking()}>
-        </Route>
-      </Routes> 
+        </Route> */}
+            </Routes>
         </>
     )
 }

@@ -5,8 +5,8 @@ function App() {
 
   return (
     <>
-      <NavLink to='/contacts' style={(({ isActive }) => ({ color: isActive ? 'red' : 'initial' }))}
-      >go to contacts</NavLink>;
+      {/* <NavLink to='/contacts' style={(({ isActive }) => ({ color: isActive ? 'red' : 'initial' }))}
+      >go to contacts</NavLink>; */}
       <WebRouting/>
     </>
   )
