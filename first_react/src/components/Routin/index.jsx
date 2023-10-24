@@ -6,15 +6,17 @@ import Contacts from '../Contacts'
 import ToDo from '../ToDo'
 import SocialNetworking from '../SocialNetworking'
 import AnyElement from '../AnyElement'
+import Header from '../Header'
 
 const WebRouting = () => {
-    return (
-        <>
-            <Routes>
-                <Route path='/' element={<Home />}></Route>
-                <Route path='/about' element={<About />} />
-                <Route path='*' element={<NotFound />} />
-                {/* <Route path='/' element={<div><ToDo />
+  return (
+    <>
+      <Routes>
+        <Route path='/' element={<Header/>}></Route>
+        <Route path='/home' element={<Home />}></Route>
+        <Route path='/about' element={<About />} />
+        <Route path='*' element={<NotFound />} />
+        {/* <Route path='/' element={<div><ToDo />
           <Link to='/contacts'>go to contacts</Link>
         </div>
         } />
@@ -27,8 +29,8 @@ const WebRouting = () => {
         <Route path='/contacts' element={<Contacts />}></Route>
         <Route path='/social' element={SocialNetworking()}>
         </Route> */}
-            </Routes>
-        </>
-    )
+      </Routes>
+    </>
+  )
 }
 export default WebRouting

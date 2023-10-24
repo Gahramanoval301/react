@@ -1,11 +1,14 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
+
 const NavigationLink = ({ to, title }) => {
     return (
+        <li>
         <NavLink to={to} style={({ isActive }) => ({ color: isActive ? 'red' : 'initial' })} >
             {title}
         </NavLink>
+        </li>
     )
 }
 
