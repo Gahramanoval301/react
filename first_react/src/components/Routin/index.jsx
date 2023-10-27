@@ -12,6 +12,7 @@ const WebRouting = () => {
   return (
     <>
       <Routes>
+        {/* <Route path='/' element={}/> */}
         <Route path='/' element={<Header/>}></Route>
         <Route path='/home' element={<Home />}></Route>
         <Route path='/about' element={<About />} />

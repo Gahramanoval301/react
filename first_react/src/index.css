@@ -1,0 +1,17 @@
+:root{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+.darkModeContainer{
+    min-height: 100vh;
+    background-color: black !important;
+    color: #ffffff !important;
+  }
+  .darkModeContainer *{
+    color: white !important;
+    background-color: rgb(67, 65, 65) !important;
+  }
