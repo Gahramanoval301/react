@@ -7,6 +7,8 @@ import ToDo from '../ToDo'
 import SocialNetworking from '../SocialNetworking'
 import AnyElement from '../AnyElement'
 import Header from '../Header'
+import SomeElement from '../AnyElement/useRef'
+import Modal from '../Modal'
 
 const WebRouting = () => {
   return (
@@ -17,6 +19,9 @@ const WebRouting = () => {
         <Route path='/home' element={<Home />}></Route>
         <Route path='/about' element={<About />} />
         <Route path='*' element={<NotFound />} />
+        <Route path='/anyelement' element={<SomeElement/>}/> 
+        <Route path='/modal' element={<Modal/>}/> 
+
         {/* <Route path='/' element={<div><ToDo />
           <Link to='/contacts'>go to contacts</Link>
         </div>
