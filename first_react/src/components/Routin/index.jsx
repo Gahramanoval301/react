@@ -9,18 +9,20 @@ import AnyElement from '../AnyElement'
 import Header from '../Header'
 import SomeElement from '../AnyElement/useRef'
 import Modal from '../Modal'
+import UsersWithReducer from '../pages/UsersWithReducer'
 
 const WebRouting = () => {
   return (
     <>
       <Routes>
         {/* <Route path='/' element={}/> */}
-        <Route path='/' element={<Header/>}></Route>
-        <Route path='/home' element={<Home />}></Route>
+        {/* <Route path='/header' element={<Header/>}></Route> */}
+        <Route path='/' element={<Home />}></Route>
         <Route path='/about' element={<About />} />
         <Route path='*' element={<NotFound />} />
         <Route path='/anyelement' element={<SomeElement/>}/> 
         <Route path='/modal' element={<Modal/>}/> 
+        <Route path='/users' element={<UsersWithReducer/>}/>
 
         {/* <Route path='/' element={<div><ToDo />
           <Link to='/contacts'>go to contacts</Link>
