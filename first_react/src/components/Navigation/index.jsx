@@ -18,6 +18,7 @@ const Navigation = () => {
             <NavigationLink to='/' title='Home' />
             <NavigationLink to='/about' title='go to about' />
             <NavigationLink to='/users' title='UsersWithReducer' />
+            <NavigationLink to='/followers' title='AlionFollowers' />
         </>
     )
 

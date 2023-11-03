@@ -10,6 +10,7 @@ import Header from '../Header'
 import SomeElement from '../AnyElement/useRef'
 import Modal from '../Modal'
 import UsersWithReducer from '../pages/UsersWithReducer'
+import AlionFollowers from '../pages/AlionFollowers'
 
 const WebRouting = () => {
   return (
@@ -23,6 +24,7 @@ const WebRouting = () => {
         <Route path='/anyelement' element={<SomeElement/>}/> 
         <Route path='/modal' element={<Modal/>}/> 
         <Route path='/users' element={<UsersWithReducer/>}/>
+        <Route path='/followers' element={<AlionFollowers/>}/>
 
         {/* <Route path='/' element={<div><ToDo />
           <Link to='/contacts'>go to contacts</Link>
