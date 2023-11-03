@@ -22,11 +22,21 @@ const reducerFollowers = (state = initialState, action) => {
                     follower.id !== action.payload)
             }
         case actions.rm_remove_with_a:
-            const index = state.followers.findIndex((fol) => fol.login.toLowerCase().startsWith('a'))
-            console.log(index)
-            const fols = [...state.followers]
-            if (index !== -1) fols.splice(index, 1)
-            return { ...state, followers: fols }
+            let isFiltered = false;
+            const newFols = state.followers.filter((fol)=>{
+                if(isFiltered ? false : fol.login.toLowerCase().startsWith('a'))
+                {
+                    isFiltered = true;
+                    return false;
+                }
+                return true
+            })
+            return {...state, followers: newFols}
+            // const index = state.followers.findIndex((fol) => fol.login.toLowerCase().startsWith('a'))
+            // console.log(index)
+            // const fols = [...state.followers]
+            // if (index !== -1) fols.splice(index, 1)
+            // return { ...state, followers: fols }
         default:
             return state;
     }
