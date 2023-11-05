@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { decrement, increment, inrementByAmount } from './index.jsx'
+import { decrement, increment, incremenetByAmount } from './index.jsx'
 
 export function CounterRT() {
     const count = useSelector((state) => {
@@ -24,6 +24,7 @@ export function CounterRT() {
                 >
                     Decrement
                 </button>
+                <button onClick={()=> dispatch(incremenetByAmount(5))}>incremenetByAmount</button>
             </div>
         </div>
     )
