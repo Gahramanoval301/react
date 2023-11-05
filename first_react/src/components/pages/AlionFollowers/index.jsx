@@ -3,7 +3,7 @@ import PageContainer from '../../PageContainer'
 import reducerFollowers, { actions, getFollowers, initialState } from './reducer'
 import axios from 'axios'
 
-const buttonStyle = {
+export const buttonStyle = {
   outline: 'none',
   backgroundColor: 'pink',
   color: 'blue',
@@ -18,7 +18,7 @@ const containerStyle = {
   margin: 10,
   alignItems: 'center'
 }
-const imgStyle = {
+export const imgStyle = {
   heigth: '200px',
   width: '200px',
   objectFit: 'cover'

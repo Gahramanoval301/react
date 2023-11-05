@@ -12,6 +12,7 @@ import Modal from '../Modal'
 import UsersWithReducer from '../pages/UsersWithReducer'
 import AlionFollowers from '../pages/AlionFollowers'
 import CounterRedux from '../pages/CounterRedux'
+import UsersWithRedux from '../pages/UsersWithRedux'
 
 const WebRouting = () => {
   return (
@@ -27,7 +28,7 @@ const WebRouting = () => {
         <Route path='/users' element={<UsersWithReducer/>}/>
         <Route path='/followers' element={<AlionFollowers/>}/>
         <Route path='/counterRedux' element={<CounterRedux/>}/>
-
+        <Route path='/usersWithRedux' element={<UsersWithRedux/>}/>
         {/* <Route path='/' element={<div><ToDo />
           <Link to='/contacts'>go to contacts</Link>
         </div>
