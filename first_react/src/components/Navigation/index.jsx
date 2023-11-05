@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import styles from './index.module.css'
 
 
 const NavigationLink = ({ to, title }) => {
@@ -14,7 +15,7 @@ const NavigationLink = ({ to, title }) => {
 
 const Navigation = () => {
     return (
-        <>
+        <div className={styles.nav}>
             <NavigationLink to='/' title='Home' />
             <NavigationLink to='/about' title='go to about' />
             <NavigationLink to='/users' title='UsersWithReducer' />
@@ -22,7 +23,7 @@ const Navigation = () => {
             <NavigationLink to='/counterRedux' title='CounterRedux' />
             <NavigationLink to='/usersWithRedux' title='UsersWithRedux' />
             <NavigationLink to='/contactsWithRedux' title='ContactsWithRedux' />
-        </>
+        </div>
     )
 
 }

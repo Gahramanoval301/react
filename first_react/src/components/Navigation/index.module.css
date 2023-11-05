@@ -1,0 +1,7 @@
+.nav{
+    position: sticky;
+    background-color: aliceblue;
+    padding: 1rem;
+    line-height: 1.5rem;
+    top:0;
+}

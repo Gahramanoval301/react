@@ -1,15 +1,25 @@
 import React from 'react'
 import Navigation from '../Navigation'
-const PageContainer = ({children}) => {
+const PageContainer = ({ children }) => {
+  const hfStyles = {
+    backgroundColor: 'navy',
+    textAlign: 'center',
+    padding: '1rem',
+    color: 'white',
+    fontSize: '1.2rem',
+    letterSpacing: '5px'
+
+  }
+
   return (
     <>
-      <header style={{backgroundColor:'red', width: 200}}>
-        IM' header
+      <header style={hfStyles}>
+        Header
       </header>
-      <Navigation/>
+      <Navigation />
       {children}
-      <footer style={{backgroundColor:'blue', width: 200}}>
-        Im'sd footer
+      <footer style={hfStyles}>
+        Footer
       </footer>
     </>
   )
