@@ -39,21 +39,21 @@ const AlionFollowers = () => {
   }, [])
   return (
     <PageContainer>
-       <button style={buttonStyle} onClick={() => dispatch({ type: actions.rm_remove_with_a })}>
-          remove first follower with a
-        </button>
+      <button style={buttonStyle} onClick={() => dispatch({ type: actions.rm_remove_with_a })}>
+        remove first follower with a
+      </button>
       {
-        state.followers.map((follower) => {
+        state.map((follower) => {
           return (
-      <div key={follower.id} style={containerStyle}>
-        <img style={imgStyle} src={follower.avatar_url} alt={`${follower.login}-follower photo`} />
-        <h1>{follower.login}</h1>
-        <button style={buttonStyle} onClick={() => dispatch({
-          type: actions.remove_follower,
-          payload: follower.id
-        })}>❌</button>
-      </div>
-      )
+            <div key={follower.id} style={containerStyle}>
+              <img style={imgStyle} src={follower.avatar_url} alt={`${follower.login}-follower photo`} />
+              <h1>{follower.login}</h1>
+              <button style={buttonStyle} onClick={() => dispatch({
+                type: actions.remove_follower,
+                payload: follower.id
+              })}>❌</button>
+            </div>
+          )
         })
       }
     </PageContainer>
