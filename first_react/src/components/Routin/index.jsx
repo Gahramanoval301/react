@@ -14,7 +14,7 @@ import AlionFollowers from '../pages/AlionFollowers'
 import CounterRedux from '../pages/CounterRedux'
 import UsersWithRedux from '../pages/UsersWithRedux'
 import ContactWithRedux from '../pages/ContactWithRedux'
-
+import { CounterRT } from '../CounterSlice/counter.jsx'
 const WebRouting = () => {
   return (
     <>
@@ -24,13 +24,14 @@ const WebRouting = () => {
         <Route path='/' element={<Home />}></Route>
         <Route path='/about' element={<About />} />
         <Route path='*' element={<NotFound />} />
-        <Route path='/anyelement' element={<SomeElement/>}/> 
-        <Route path='/modal' element={<Modal/>}/> 
-        <Route path='/users' element={<UsersWithReducer/>}/>
-        <Route path='/followers' element={<AlionFollowers/>}/>
-        <Route path='/counterRedux' element={<CounterRedux/>}/>
-        <Route path='/usersWithRedux' element={<UsersWithRedux/>}/>
-        <Route path='/contactsWithRedux' element={<ContactWithRedux/>}/>
+        <Route path='/anyelement' element={<SomeElement />} />
+        <Route path='/modal' element={<Modal />} />
+        <Route path='/users' element={<UsersWithReducer />} />
+        <Route path='/followers' element={<AlionFollowers />} />
+        <Route path='/counterRedux' element={<CounterRedux />} />
+        <Route path='/usersWithRedux' element={<UsersWithRedux />} />
+        <Route path='/contactsWithRedux' element={<ContactWithRedux />} />
+        <Route path='/CounterWithReduxToolkit' element={<CounterRT />} />
         {/* <Route path='/' element={<div><ToDo />
           <Link to='/contacts'>go to contacts</Link>
         </div>

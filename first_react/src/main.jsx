@@ -9,12 +9,13 @@ import { createStore } from 'redux'
 import { ModeContextProvider } from './context-api/ModeContext.jsx'
 import RootReducer from './components/redux/index.jsx'
 import { Provider } from 'react-redux'
-
+import {storet} from './app/store.jsx' 
+ 
 const store = createStore(RootReducer)
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Provider store={store}>
+    <Provider store={storet}>
       <ModeContextProvider>
         <BrowserRouter>
           <App />
