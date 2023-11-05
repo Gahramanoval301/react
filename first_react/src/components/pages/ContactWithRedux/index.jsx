@@ -14,7 +14,7 @@ const imgStyle = {
     objectFit: 'cover',
     objectPosition: 'center'
 }
-const deleteBtnStyle = {
+export const smallBtnStyle = {
     border: '1px solid navy',
     borderRadius: '5px',
     padding: '5px',
@@ -65,13 +65,13 @@ const ContactsWithRedux = ({ contacts, dispatch }) => {
                                 <p>{name} <span>{age}</span></p>
                                 <img style={imgStyle} src={photo} alt={`${name}'s photo`} />
                                 <div style={buttonContainerStyle} className='buttonContainer'>
-                                    <button style={deleteBtnStyle} onClick={() => {
+                                    <button style={smallBtnStyle} onClick={() => {
                                         dispatch({
                                             type: 'delete_contact',
                                             payload: id
                                         })
                                     }}>❌</button>
-                                    <button style={deleteBtnStyle} onClick={() => {
+                                    <button style={smallBtnStyle} onClick={() => {
                                         dispatch({
                                             type: 'edit_contact',
                                             payload: { id, name, age, photo }
