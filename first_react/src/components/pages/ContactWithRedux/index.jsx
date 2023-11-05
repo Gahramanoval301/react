@@ -4,7 +4,10 @@ import { connect } from 'react-redux'
 import PageContainer from '../../PageContainer'
 
 const _url = 'http://localhost:3000/contacts'
-
+const buttonContainerStyle = {
+    display: 'flex',
+    gap: '5px'
+}
 const imgStyle = {
     width: '128px',
     height: '128px',
@@ -54,19 +57,27 @@ const ContactsWithRedux = ({ contacts, dispatch }) => {
     return (
         <PageContainer>
             <button style={buttonStyle} onClick={() => dispatch({ type: 'add_contact' })} >add contact</button>
-            <div style={containerStyle}>
+            <div style={containerStyle} className='container'>
                 {
                     contacts.map(({ id, age, name, photo }) => {
                         return (
-                            <div key={id} style={contactCardStyle}>
+                            <div key={id} style={contactCardStyle} className='contact-card'>
                                 <p>{name} <span>{age}</span></p>
                                 <img style={imgStyle} src={photo} alt={`${name}'s photo`} />
-                                <button style={deleteBtnStyle} onClick={() => {
-                                    dispatch({
-                                        type: 'delete_contact',
-                                        payload: id
-                                    })
-                                }}>❌</button>
+                                <div style={buttonContainerStyle} className='buttonContainer'>
+                                    <button style={deleteBtnStyle} onClick={() => {
+                                        dispatch({
+                                            type: 'delete_contact',
+                                            payload: id
+                                        })
+                                    }}>❌</button>
+                                    <button style={deleteBtnStyle} onClick={() => {
+                                        dispatch({
+                                            type: 'edit_contact',
+                                            payload: { id, name, age, photo }
+                                        })
+                                    }}>🖊</button>
+                                </div>
                             </div>
                         )
                     })

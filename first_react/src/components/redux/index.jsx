@@ -36,8 +36,19 @@ const RootReducer = (store = initialStore, action) => {
             let age = prompt('Please enter age:')
             let photo = prompt('Please enter image url:')
             axios.post(url, { id: idc, name, age, photo })
+            return store
         case 'delete_contact':
-            axios.delete(url + '/' + action.payload)
+            confirm('Are you sure you want to delete?') ? axios.delete(url + '/' + action.payload)
+                : alert('Be Careful 😊')
+            return store
+        case 'edit_contact':
+            let idOwn = action.payload.id
+            let namec = prompt('Please enter new name:', action.payload.name)
+            let agec = prompt('Please enter new age:', action.payload.age)
+            let photoc = prompt('Please enter new image url:', action.payload.photo)
+            let newContact = { id: idOwn, name: namec, age: agec, photo: photoc }
+            axios.put(url + '/' + action.payload.id, newContact)
+            return store
         default:
             return store;
 
