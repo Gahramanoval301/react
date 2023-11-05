@@ -3,7 +3,8 @@ import { useSelector, useDispatch } from 'react-redux'
 import { decrement, increment, inrementByAmount } from './index.jsx'
 
 export function CounterRT() {
-    const count = useSelector((state) => { console.log(state, state.counter, state.counter.value);
+    const count = useSelector((state) => {
+        console.log(state, state.counter, state.counter.value);
         return state.counter.value
     })
     const dispatch = useDispatch()
@@ -22,7 +23,8 @@ export function CounterRT() {
                     onClick={() => dispatch(decrement())}
                 >
                     Decrement
-                </button>            </div>
+                </button>
+            </div>
         </div>
     )
 }
