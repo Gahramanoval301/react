@@ -19,6 +19,7 @@ const Navigation = () => {
             <NavigationLink to='/about' title='go to about' />
             <NavigationLink to='/users' title='UsersWithReducer' />
             <NavigationLink to='/followers' title='AlionFollowers' />
+            <NavigationLink to='/counterRedux' title='CounterRedux' />
         </>
     )
 
