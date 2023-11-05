@@ -21,6 +21,7 @@ const Navigation = () => {
             <NavigationLink to='/followers' title='AlionFollowers' />
             <NavigationLink to='/counterRedux' title='CounterRedux' />
             <NavigationLink to='/usersWithRedux' title='UsersWithRedux' />
+            <NavigationLink to='/contactsWithRedux' title='ContactsWithRedux' />
         </>
     )
 

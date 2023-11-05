@@ -2,7 +2,8 @@ import React from 'react'
 
 const initialStore = {
     count: 0,
-    users: []
+    users: [],
+    contacts: []
 }
 const RootReducer = (store = initialStore, action) => {
     switch (action.type) {
@@ -25,6 +26,8 @@ const RootReducer = (store = initialStore, action) => {
             let rm_last_user = [...store.users]
             rm_last_user.pop()
             return { ...store, users: rm_last_user }
+        case 'get_contacts':
+            return { ...store, contacts: action.payload }
         default:
             return store;
 

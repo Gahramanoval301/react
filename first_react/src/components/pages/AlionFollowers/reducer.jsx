@@ -5,7 +5,7 @@ const url = 'https://api.github.com/users/Ali-GreenHeart/followers'
 
 export const initialState = {
     count: 0,
-    followers: []
+    followers: [],
 }
 export let actions = {
     'get_followers': 0,
