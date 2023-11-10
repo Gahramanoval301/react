@@ -1,0 +1,30 @@
+.error{
+    color:red;
+}
+.form {
+    padding: 1rem 2rem;
+    border:2px dotted dodgerblue;
+    margin: 1rem;
+}
+.submit{
+    background-color: dodgerblue;
+    border:1px solid aliceblue;
+    border-radius: 2rem;
+    color: aliceblue;
+    padding: 7px 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: block;
+    margin: 10px 0;
+}
+textarea{
+    resize: none;
+    background-color: antiquewhite;
+    outline: none;
+    border-radius: 5px;
+    border:1px solid rgb(235, 192, 113);
+    padding: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 2px;
+    font-weight: 20px;
+    height: 4rem;
+}
