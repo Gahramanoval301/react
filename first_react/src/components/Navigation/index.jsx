@@ -24,6 +24,7 @@ const Navigation = () => {
             <NavigationLink to='/usersWithRedux' title='UsersWithRedux' />
             <NavigationLink to='/contactsWithRedux' title='ContactsWithRedux' />
             <NavigationLink to='/commenter' title='CommentsWithReduxToolkit' />
+            <NavigationLink to='/managingStates' title='ManagingStates' />
         </div>
     )
 

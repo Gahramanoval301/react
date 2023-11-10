@@ -16,6 +16,9 @@ import UsersWithRedux from '../pages/UsersWithRedux'
 import ContactWithRedux from '../pages/ContactWithRedux'
 import { CounterRT } from '../CounterSlice/counter.jsx'
 import Commenter from '../pages/CommentsWithReduxT/commenter'
+import ManagingStates from '../pages/ManagingStates/index.jsx'
+import InputWork1 from '../pages/ManagingStates/inputWork1/index.jsx'
+import ManagingDetails from '../pages/ManagingStates/ManagingDetails.jsx'
 const WebRouting = () => {
   return (
     <>
@@ -34,6 +37,8 @@ const WebRouting = () => {
         <Route path='/contactsWithRedux' element={<ContactWithRedux />} />
         <Route path='/CounterWithReduxToolkit' element={<CounterRT />} />
         <Route path='/commenter' element={<Commenter />} />
+        <Route path='/managingStates' element={<ManagingStates />} />
+        <Route path='/managingStates/:inputW' element={<ManagingDetails />} />
         {/* <Route path='/' element={<div><ToDo />
           <Link to='/contacts'>go to contacts</Link>
         </div>
