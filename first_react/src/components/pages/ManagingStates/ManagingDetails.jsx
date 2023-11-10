@@ -4,6 +4,7 @@ import InputWork1 from './inputWork1';
 import InputWork2 from './inputWork2';
 import InputWork3 from './inputWork3';
 import InputWork4 from './inputWork4';
+import InputWork5 from './inputWork5';
 
 const ManagingDetails = () => {
     const {inputW} = useParams()
@@ -11,6 +12,7 @@ const ManagingDetails = () => {
     else if (inputW === 'inputwork2') return <InputWork2/>
     else if (inputW === 'inputwork3') return <InputWork3/>
     else if (inputW === 'inputwork4') return <InputWork4/>
+    else if (inputW === 'inputwork5') return <InputWork5/>
 }
 
 export default ManagingDetails
