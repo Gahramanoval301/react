@@ -16,6 +16,12 @@
     display: block;
     margin: 10px 0;
 }
+.submit:disabled{
+    background-color: rgba(30, 143, 255, 0.348);
+}
+.submit:not(:disabled):hover{
+    background-color: rgb(1, 121, 241);
+}
 textarea{
     resize: none;
     background-color: antiquewhite;

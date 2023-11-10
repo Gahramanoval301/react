@@ -42,7 +42,7 @@ const InputWork1 = () => {
 
     return (
         <div className='form'>
-            <h2>City quiz</h2>
+            <h2>JavaScript quiz</h2>
             <p>Which year JavaScript is created?</p>
             <form onSubmit={handleSubmit}>
                 <textarea name="answer" id="answer"
