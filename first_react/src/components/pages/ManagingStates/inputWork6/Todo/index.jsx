@@ -1,11 +1,17 @@
 import React from 'react'
-export const ToDo = ({ todo, deleteTodo }) => {
+import styles from './index.module.css'
+
+export const ToDo = ({ todo, deleteTodo, toggleCompleted }) => {
+
     console.log('tododaki', todo);
+
     return (
         <div>
-            <p>{todo.task}</p>
+            <p style={{ cursor: 'pointer' }} onClick={() => toggleCompleted(todo.id)} 
+            className={todo.completed ? (styles.task) : ''}>
+                {todo.task}</p>
             <button>Edit</button>
-            <button onClick={()=>deleteTodo(todo.id)}>Delete</button>
+            <button onClick={() => deleteTodo(todo.id)}>Delete</button>
         </div>
     )
 }
