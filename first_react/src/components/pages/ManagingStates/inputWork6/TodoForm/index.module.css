@@ -1,0 +1,33 @@
+.formTodo {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.formTodo button {
+  background-color: blueviolet;
+  border: 1px solid rgba(238, 130, 238, 0.661);
+  border-radius: 3px;
+  padding: 7px 14px;
+  color: white;
+  cursor:pointer;
+}
+.formTodo button:hover{
+    background-color: rgba(137, 43, 226, 0.727);
+}
+.formTodo button:disabled{
+    background-color: rgb(135, 94, 173);
+    cursor:no-drop;
+}
+.formTodo input {
+    outline-color: violet;
+    border:1px solid rgb(95, 69, 19);
+    border-radius: 2px;
+    letter-spacing: 2px;
+    padding: 5px;
+    line-height: 22px;
+    width: 60%;
+}
+.formTodo input:focus{
+    background-color:rgb(249, 236, 238);
+}

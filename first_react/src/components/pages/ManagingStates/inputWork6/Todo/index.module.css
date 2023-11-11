@@ -1,4 +1,30 @@
-.task{
-    text-decoration: line-through;
-    color: rgba(0, 0, 0, 0.562);
+.task {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.562);
 }
+.todoList {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 1rem;
+  margin: 10px;
+  background-color: white;
+  border: 1px solid rgb(124, 86, 14);
+}
+.todoList:hover {
+  border-color: violet;
+  background-color: rgb(252, 233, 236);
+}
+.buttonGroup button {
+    background-color: blueviolet;
+    border: 1px solid rgba(238, 130, 238, 0.661);
+    border-radius: 3px;
+    padding: 7px 14px;
+    color: white;
+    cursor:pointer;
+    margin-right: 5px;
+  }
+  .buttonGroup button:hover{
+      background-color: rgba(137, 43, 226, 0.727);
+  }
