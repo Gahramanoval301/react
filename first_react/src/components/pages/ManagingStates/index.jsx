@@ -10,6 +10,7 @@ const ManagingStates = () => {
         <Link to='/managingStates/inputwork3'>InputWork3</Link>
         <Link to='/managingStates/inputwork4'>InputWork4</Link>
         <Link to='/managingStates/inputwork5'>InputWork5</Link>
+        <Link to='/managingStates/inputwork6'>InputWork6</Link>
     </div>
   )
 
