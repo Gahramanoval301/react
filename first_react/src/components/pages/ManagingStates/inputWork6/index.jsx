@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { TodoForm } from './TodoForm'
 import { ToDo } from './Todo'
 import { v4 } from 'uuid'
+import { EditTodoForm } from './EditTodoForm'
 const InputWork6 = () => {
     const [todos, setTodos] = useState([])
 
@@ -21,7 +22,22 @@ const InputWork6 = () => {
                 return todo
             }
         }))
+    }
 
+    function toggleEdit(id) {
+        setTodos(todos.map(todo => {
+            if (todo.id === id) {
+                return { ...todo, isEditing: true }
+            }
+            else {
+                return todo
+            }
+        }))
+    }
+    function editTodo(task, id) {
+        setTodos(todos.map(todo => {
+            return { ...todo, task, isEditing: false}
+        }))
     }
 
     console.log('todos', todos);
@@ -30,7 +46,12 @@ const InputWork6 = () => {
         <>
             <TodoForm addTodo={addTodo} />
             {todos.map((todo) => {
-                return <ToDo todo={todo} deleteTodo={deleteTodo} toggleCompleted={toggleCompleted} key={todo.id} />
+                console.log(todo.isEditing);
+                return (todo.isEditing ?
+                    <EditTodoForm editTodo={editTodo} key={todo.id} />
+                    : <ToDo todo={todo} deleteTodo={deleteTodo} toggleCompleted={toggleCompleted} toggleEdit={toggleEdit} key={todo.id} />
+
+                )
             })}
         </>
 
