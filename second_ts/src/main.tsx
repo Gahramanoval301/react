@@ -9,7 +9,6 @@ import { red, purple, green } from '@mui/material/colors';
 const theme = createTheme({
   palette: {
     primary: green,
-    secondary: red,
   },
 })
 ReactDOM.createRoot(document.getElementById('root')!).render(
